@@ -5,6 +5,9 @@ import TopHeader from "../component/TopHeader.vue";
 <template>
   <div>
     <TopHeader />
-    <div>projetos</div>
+
+    <div class="px-4 pt-4 mx-auto">
+      <p class="font-bold border-b-2 text-lg mb-2">Projetos</p>
+    </div>
   </div>
 </template>

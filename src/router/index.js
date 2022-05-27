@@ -2,6 +2,9 @@ import { createRouter, createWebHistory } from "vue-router";
 import Login from '../view/Login.vue'
 import Home from '../view/Home.vue'
 import Projetos from '../view/Projetos.vue'
+import CriarAtividade from '../view/CriarAtividade.vue'
+import ListaAtividades from '../view/ListaAtividades.vue'
+
 const routes = [
     {
         path: '/login',
@@ -17,6 +20,16 @@ const routes = [
         path: '/projetos',
         name: 'Projetos',
         component: Projetos
+    },
+    {
+        path: '/criar-atividade',
+        name: 'criar-atividade',
+        component: CriarAtividade
+    },
+    {
+        path: '/lista-atividades',
+        name: 'lista-atividades',
+        component: ListaAtividades
     }
 ]
 

@@ -1,14 +1,14 @@
 export function cards() {
     const conteudo = [
         {
-            titulo: "card1",
-            texto: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem tempora sit at, aperiam dolor minima ipsam.Dignissimos at magni sapiente maiores inventore, ipsa libero veniam recusandae laborum, eaque sint cumque!",
-            rota: "/"
+            titulo: "Criar Atividade",
+            texto: "Crie suas atividades de maneira facil e pratica. Click em criar atividade e comece agora!",
+            rota: "/criar-atividade"
         },
         {
-            titulo: "card2",
-            texto: "pesquisas, sit amet consectetur adipisicing elit. Exercitationem tempora sit at, aperiam dolor minima ipsam.Dignissimos at magni sapiente maiores inventore, ipsa libero veniam recusandae laborum, eaque sint cumque!",
-            rota: "/pesquisa"
+            titulo: "Lista de atividades",
+            texto: "Veja quantas atividades você tem no dia de hoje para realizar",
+            rota: "/lista-atividades"
         }
     ]
     return conteudo
