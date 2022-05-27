@@ -9,6 +9,11 @@ export function cards() {
             titulo: "Lista de atividades",
             texto: "Veja quantas atividades você tem no dia de hoje para realizar",
             rota: "/lista-atividades"
+        },
+        {
+            titulo: "Agenda de ativadades",
+            texto: "Veja quantas atividades você tem no dia de hoje para realizar",
+            rota: "/lista-atividades"
         }
     ]
     return conteudo
