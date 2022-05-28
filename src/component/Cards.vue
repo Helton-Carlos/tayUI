@@ -11,13 +11,16 @@ const card = cards();
     :key="cards"
   >
     <div class="flex">
-      <span class="material-icons">{{ cards.icon }}</span>
-      <p class="font-bold">{{ cards.title }}</p>
+      <span class="material-icons text-cyan-700">{{ cards.icon }}</span>
+      <p class="font-bold uppercase text-cyan-700">{{ cards.title }}</p>
     </div>
-    <p>{{ cards.text }}</p>
+    <p class="mt-2 font-semibold">{{ cards.text }}</p>
     <router-link :to="cards.path">
-      <button class="px-2 py-1 mt-2 text-white bg-indigo-600 rounded-md btn">
-        Veja mais
+      <button
+        class="flex items-center py-1 pl-2 mt-2 text-white bg-indigo-600 rounded-md btn hover:bg-indigo-800"
+      >
+        <p class="font-semibold">Veja mais</p>
+        <span class="text-white material-icons">chevron_right</span>
       </button>
     </router-link>
   </div>

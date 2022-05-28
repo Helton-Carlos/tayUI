@@ -28,21 +28,12 @@ onMounted(() => {
 
 <template>
   <div
-    class="
-      flex
-      items-center
-      justify-center
-      min-h-full
-      px-4
-      py-12
-      sm:px-6
-      lg:px-8
-    "
+    class="flex items-center justify-center min-h-full px-4 py-12 sm:px-6 lg:px-8"
   >
-    <div class="w-full max-w-md space-y-8">
+    <div class="w-full max-w-md mt-10 space-y-8">
       <div>
         <img
-          class="w-auto h-12 mx-auto"
+          class="w-auto h-12 mx-auto mt-10"
           src="../assets/t-tayui.png"
           alt="Workflow"
         />
@@ -59,25 +50,7 @@ onMounted(() => {
               autocomplete="email"
               required
               v-model="login.email"
-              class="
-                relative
-                block
-                w-full
-                px-3
-                py-2
-                my-5
-                text-gray-900
-                placeholder-gray-500
-                border border-gray-300
-                rounded-none
-                appearance-none
-                rounded-t-md
-                focus:outline-none
-                focus:ring-indigo-500
-                focus:border-indigo-500
-                focus:z-10
-                sm:text-sm
-              "
+              class="relative block w-full px-3 py-2 my-5 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
               placeholder="Email address"
             />
           </div>
@@ -90,24 +63,7 @@ onMounted(() => {
               type="password"
               autocomplete="current-password"
               required
-              class="
-                relative
-                block
-                w-full
-                px-3
-                py-2
-                text-gray-900
-                placeholder-gray-500
-                border border-gray-300
-                rounded-none
-                appearance-none
-                rounded-b-md
-                focus:outline-none
-                focus:ring-indigo-500
-                focus:border-indigo-500
-                focus:z-10
-                sm:text-sm
-              "
+              class="relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
               placeholder="Password"
             />
           </div>
@@ -120,14 +76,7 @@ onMounted(() => {
               name="remember-me"
               type="checkbox"
               v-model="check"
-              class="
-                w-4
-                h-4
-                text-indigo-600
-                border-gray-300
-                rounded
-                focus:ring-indigo-500
-              "
+              class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
             />
             <label for="remember-me" class="block ml-2 text-sm text-gray-900">
               Lembrar-me
@@ -147,26 +96,7 @@ onMounted(() => {
         <div>
           <button
             type="submit"
-            class="
-              relative
-              flex
-              justify-center
-              w-full
-              px-4
-              py-2
-              text-sm
-              font-medium
-              text-white
-              bg-indigo-600
-              border border-transparent
-              rounded-md
-              group
-              hover:bg-indigo-700
-              focus:outline-none
-              focus:ring-2
-              focus:ring-offset-2
-              focus:ring-indigo-500
-            "
+            class="relative flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md group hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
             <span class="absolute inset-y-0 left-0 flex items-center pl-3">
               <!-- Heroicon name: solid/lock-closed -->

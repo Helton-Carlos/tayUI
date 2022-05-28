@@ -1,6 +1,6 @@
 export function cards() {
     const conteudo = [
-        {   icon:"close",
+        {   icon:"flag_circle",
             title: "Criar Atividade",
             text: "Crie suas atividades de maneira facil e pratica. Click em criar atividade e comece agora!",
             path: "/criar-atividade"
@@ -12,7 +12,7 @@ export function cards() {
             path: "/lista-atividades"
         },
         {
-            icon:"delete",
+            icon:"calendar_today",
             title: "Agenda de ativadades",
             text: "Veja quantas atividades você tem no dia de hoje para realizar",
             path: "/lista-atividades"
