@@ -1,5 +1,6 @@
 <script setup>
-import cards from "../commands/wellcome.js";
+import "material-icons/iconfont/material-icons.css";
+import cards from "../commands/card-home.js";
 const card = cards();
 </script>
 
@@ -9,10 +10,13 @@ const card = cards();
     v-for="cards in card"
     :key="cards"
   >
-    <p class="font-bold">{{ cards.titulo }}</p>
-    <p>{{ cards.texto }}</p>
-    <router-link :to="cards.rota">
-      <button class="px-2 py-1 text-white bg-indigo-600 rounded-md btn">
+    <div class="flex">
+      <span class="material-icons">{{ cards.icon }}</span>
+      <p class="font-bold">{{ cards.title }}</p>
+    </div>
+    <p>{{ cards.text }}</p>
+    <router-link :to="cards.path">
+      <button class="px-2 py-1 mt-2 text-white bg-indigo-600 rounded-md btn">
         Veja mais
       </button>
     </router-link>

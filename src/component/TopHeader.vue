@@ -15,22 +15,12 @@ const rotas = reactive([
           <div><router-link to="/" class="font-bold">TayUI</router-link></div>
           <nav class="flex items-center">
             <ul v-for="rots in rotas" :key="rots">
-              <router-link :to="rots.rota" class="px-2 hover:text-yellow-300 font-medium">{{
+              <router-link :to="rots.rota" class="px-2 font-medium hover:text-yellow-500">{{
                 rots.nome
               }}</router-link>
             </ul>
             <button
-              class="
-                btn
-                bg-yellow-300
-                rounded-lg
-                px-3
-                py-1
-                ml-3
-                text-indigo-600
-                font-medium
-                hover:bg-yellow-500
-              "
+              class="px-3 py-1 ml-3 font-medium text-indigo-600 bg-yellow-300 rounded-lg btn hover:bg-yellow-500"
             >
               <router-link to="/login">login</router-link>
             </button>
