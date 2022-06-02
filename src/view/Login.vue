@@ -1,18 +1,33 @@
 <script setup>
 import { reactive, ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
-
+import validation from "../component/Validation.vue";
 const router = useRouter();
 const check = ref(false);
+const validationcurrent = ref("");
 const login = reactive({
   email: "",
   password: "",
 });
 
 function logar() {
-  localStorage.setItem("login", JSON.stringify(login));
-  localStorage.setItem("check", check.value);
-  router.push({ name: "Home" });
+  fetch("https://jsonplaceholder.typicode.com/comments?postId=1")
+    .then((response) => response.json())
+    .then((json) => {
+      json.forEach((element) => {
+        if (element.email === login.email) {
+          localStorage.setItem("login", JSON.stringify(login));
+          localStorage.setItem("check", check.value);
+          router.push({ name: "Home" });
+          //Jayne_Kuhic@sydney.com
+        } else {
+          validationcurrent.value = "error";
+          setTimeout(() => {
+            validationcurrent.value = "";
+          }, 2000);
+        }
+      });
+    });
 }
 
 onMounted(() => {
@@ -84,12 +99,9 @@ onMounted(() => {
           </div>
 
           <div class="text-sm">
-            <router-link
-              to="/home"
-              class="font-medium text-indigo-600 hover:text-indigo-500"
-            >
+            <p class="font-medium text-indigo-600 hover:text-indigo-500">
               Esqueceu sua senha?
-            </router-link>
+            </p>
           </div>
         </div>
 
@@ -99,7 +111,6 @@ onMounted(() => {
             class="relative flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md group hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
             <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-              <!-- Heroicon name: solid/lock-closed -->
               <svg
                 class="w-5 h-5 text-indigo-500 group-hover:text-indigo-400"
                 xmlns="http://www.w3.org/2000/svg"
@@ -120,4 +131,5 @@ onMounted(() => {
       </form>
     </div>
   </div>
+  <validation :validation="validationcurrent" label="Erro no login"/>
 </template>
