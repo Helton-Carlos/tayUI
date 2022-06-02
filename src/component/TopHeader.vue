@@ -8,8 +8,7 @@ const rotas = reactive([
 </script>
 
 <template>
-  <div class="min-h-full">
-    <header class="text-white bg-indigo-600">
+    <header class="w-full text-white bg-indigo-600">
       <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
           <div><router-link to="/" class="font-bold">TayUI</router-link></div>
@@ -28,5 +27,4 @@ const rotas = reactive([
         </div>
       </div>
     </header>
-  </div>
 </template>
