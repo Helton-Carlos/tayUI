@@ -8,9 +8,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "apexcharts": "^3.35.3",
     "material-icons": "^1.11.0",
     "vue": "^3.2.25",
-    "vue-router": "^4.0.15"
+    "vue-router": "^4.0.15",
+    "vue3-apexcharts": "^1.4.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.3",
