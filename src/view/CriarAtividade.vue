@@ -1,6 +1,6 @@
 <script setup>
 import TopHeader from "../component/TopHeader.vue";
-import { reactive } from "vue";
+import { reactive,ref } from "vue";
 
 const form = reactive({
   title: "",
@@ -11,8 +11,16 @@ const form = reactive({
   picked:""
 });
 
+const arrayForm =ref([])
+
 function shippmentForm() {
-  console.log(form);
+  arrayForm.value.push(form)
+  /*form.title= "",
+  form.type= "",
+  form.priority="",
+  form.initial="",
+  form.end="",
+  form.picked=""*/
 }
 </script>
 
@@ -27,6 +35,7 @@ function shippmentForm() {
       <div>
         <label class="font-semibold">Nome da atividade:</label>
         <input
+        required 
           type="text"
           placeholder="ex: comer laranja"
           class="w-full px-2 border-2"
@@ -58,11 +67,11 @@ function shippmentForm() {
       <h2 class="font-bold">Prazos:</h2>
       <div>
         <label class="font-semibold">Data inicial:</label>
-        <input type="date" class="w-full px-2 border-2" v-model="form.initial" />
+        <input type="date" class="w-full px-2 border-2" required  v-model="form.initial" />
       </div>
       <div>
         <label class="font-semibold">Data final:</label>
-        <input type="date" class="w-full px-2 border-2" v-model="form.end" />
+        <input type="date" class="w-full px-2 border-2" required  v-model="form.end" />
       </div>
       <label class="font-semibold">Possivel mudanças?</label>
       <div>
