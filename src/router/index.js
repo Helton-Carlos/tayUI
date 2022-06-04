@@ -4,6 +4,7 @@ import Home from '../view/Home.vue'
 import Projetos from '../view/Projetos.vue'
 import CriarAtividade from '../view/CriarAtividade.vue'
 import ListaAtividades from '../view/ListaAtividades.vue'
+import EsqueceuSenha from '../view/EsqueceuSenha.vue'
 
 const routes = [
     {
@@ -30,6 +31,11 @@ const routes = [
         path: '/lista-atividades',
         name: 'lista-atividades',
         component: ListaAtividades
+    },
+    {
+        path: '/esqueceu-senha',
+        name: 'esqueceu-senha',
+        component: EsqueceuSenha
     }
 ]
 
