@@ -1,6 +1,6 @@
 <script setup>
 import "material-icons/iconfont/material-icons.css";
-import cards from "../commands/card-home.js";
+import cards from "../commands/cardsCommands.js";
 const card = cards();
 </script>
 
