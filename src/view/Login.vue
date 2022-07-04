@@ -1,22 +1,17 @@
 <script setup>
-import { reactive, ref } from "vue";
+import { reactive, ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import user from "../commands/user";
 import validation from "../component/Validation.vue";
 
 const users = user()
-
-console.log()
-
 const router = useRouter();
-
-const check = ref(false);
-
 const validationcurrent = ref("");
 
 const login = reactive({
   email: "",
   password: "",
+  check: ""
 });
 
 function logar() {
@@ -32,8 +27,18 @@ function logar() {
       }, 3000);
     }
   })
-
 }
+
+onMounted(() => {
+  const localLogin = JSON.parse(localStorage.getItem('login'));
+  if (localLogin) {
+    if (localLogin.check) {
+      login.check = localLogin.check;
+      login.email = localLogin.email;
+      login.password = localLogin.password;
+    }
+  }
+})
 
 </script>
 
@@ -63,7 +68,7 @@ function logar() {
 
         <div class="flex items-center justify-between">
           <div class="flex items-center">
-            <input id="remember-me" name="remember-me" type="checkbox" v-model="check"
+            <input id="remember-me" name="remember-me" type="checkbox" v-model="login.check"
               class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500" />
             <label for="remember-me" class="block ml-2 text-sm text-gray-900">
               Lembrar-me
